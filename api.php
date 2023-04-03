@@ -1,24 +1,4 @@
-
 <?php
-/*
-if (array_key_exists("sort", $_GET)) {
-	$sort = $_GET["sort"];
-} else {
-	$sort = "domain";
-}
-
-// in php, true == 1
-// if paging = 1 , return value is spited
-if (array_key_exists("paging" , $_GET) and $_GET["paging"] == true) {
-	if (array_key_exists("offset", $_GET)) {
-		$offset = (int)$_GET["offset"];
-	} else {
-		$offset = 0;
-	}
-} else {
-
-}
-*/
 const sort_order = [
 	"asc" => "asc",
 	"desc" => "desc"
@@ -39,7 +19,7 @@ function getAll() : string{
 	$request->execute();
 	$result = $request->fetchAll(PDO::FETCH_NAMED);
 	//var_dump($result);
-    $j= json_encode($result,JSON_PRETTY_PRINT|JSON_UNESCAPED_SLASHES|JSON_PRETTY_PRINT|JSON_INVALID_UTF8_IGNORE   );
+    $j = json_encode($result,JSON_PRETTY_PRINT|JSON_UNESCAPED_SLASHES|JSON_PRETTY_PRINT|JSON_INVALID_UTF8_IGNORE   );
     return $j;
 }
 
