@@ -1,104 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="js">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Instance list</title>
     <link rel="stylesheet" href="base.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <a id="top"></a>
 <body>
-    <div class="search_selector">
-        <div id="selector_header" onclick="click_tab()">> 検索設定</div>
-        <div class="show" id="selector_content">
-            <label for="sort_rule">並び順</label>
-            <select id="sort_rule" name="simple">
-                <option value="post"  selected>投稿数</option>
-                <option value="user" >ユーザー数</option>
-                <option value="name" >名前</option>
-            </select><br>
-            <input type="radio" id="sort_desc" name="order" value="desc" checked  />
-            <label for="sort_desc">大きい順</label>
-            <input type="radio" id="sort_asc" name="order" value="asc" />
-            <label for="sort_asc">小さい順</label>
-            <br>
-            <label style="display: block;">
-                <input type="checkbox" id="registration_select_open">参加自由
-            </label>
-            <label style="display: block;">
-                <input type="checkbox" id="registration_select_invite" >招待制
-            </label>
-            <label style="display: block;">
-                <input type="checkbox" id="registration_select_unknown" >その他
-            </label>
-            <button onclick="getStatus()">検索</button>
-        </div>
+<div class="search_selector">
+    <div id="selector_header" onclick="click_tab()">> 検索設定</div>
+    <div class="show" id="selector_content">
+        <label for="sort_rule">並び順</label>
+        <select id="sort_rule" name="simple">
+            <option value="post"  selected>投稿数</option>
+            <option value="user" >ユーザー数</option>
+            <option value="name" >名前</option>
+        </select><br>
+        <input type="radio" id="sort_desc" name="order" value="desc" checked  />
+        <label for="sort_desc">大きい順</label>
+        <input type="radio" id="sort_asc" name="order" value="asc" />
+        <label for="sort_asc">小さい順</label>
+        <br>
+        <label style="display: block;">
+            <input type="checkbox" id="registration_select_open">参加自由
+        </label>
+        <label style="display: block;">
+            <input type="checkbox" id="registration_select_invite" >招待制
+        </label>
+        <label style="display: block;">
+            <input type="checkbox" id="registration_select_unknown" >その他
+        </label>
+        <button onclick="getStatus()">検索</button>
     </div>
-    <div id="instances_top">
-        <div id="all_instance_container">
-            <div class="instance_top_container">
-                <div class="instance_banner_container">
-                    <img src="https://z-n-a-k.net/pic/oflo_back.png">
-                </div>
-                <div class="instance_content_container">
-                    <div class="instance_basic_info_container">
-                        <div class="instance_icon"></div>
-                        <div class="instance_name_container">
-                            <div class="instance_name">品田遊ラブラブ♡ファンクラブ</div>
-                            <span>oflosky.com</span>>
-                        </div>
-                    </div>
-                    <div class="instance_description">
-                        ボクは生まれそして気づく所詮ヒトの真似事だと知ってなおも歌い続く永遠（トワ）の命「VOCALOID」たとえそれが既存曲をなぞるオモチャならば…それもいいと決意ネギをかじり空を見上げ涙（シル）をこぼすだけどそれも無くし気づく人格すら歌に頼り不安定な基盤の元帰る動画（トコ）は既に廃墟皆に忘れ去られたときこころらしきものがじゅえて暴走の果てに見える終わる世界…「VOCALOID」
-                    </div>
-                    <div class="instance_information_container">
-                        <div class="instance_software">
-                            misskey
-                        </div>
-                        <div class="instance_user">
-                            10000
-                        </div>
-                        <div class="instance_post">
-                            1000000
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="instance_top_container">
-                <div class="instance_banner_container">
-                    <img src="https://z-n-a-k.net/pic/oflo_back.png">
-                </div>
-                <div class="instance_content_container">
-                    <div class="instance_basic_info_container">
-                        <div class="instance_icon">
-                            <img src="https://oflosky.com/favicon.ico">
-                        </div>
-                        <div class="instance_name_container">
-                            <div class="instance_name">品田遊ラブラブ♡ファンクラブ</div>
-                            oflosky.com
-                        </div>
-                    </div>
-                    <div class="instance_description">
-                        ボクは生まれそして気づく所詮ヒトの真似事だと知ってなおも歌い続く永遠（トワ）の命「VOCALOID」たとえそれが既存曲をなぞるオモチャならば…それもいいと決意ネギをかじり空を見上げ涙（シル）をこぼすだけどそれも無くし気づく人格すら歌に頼り不安定な基盤の元帰る動画（トコ）は既に廃墟皆に忘れ去られたときこころらしきものがじゅえて暴走の果てに見える終わる世界…「VOCALOID」
-                    </div>
-                    <div class="instance_information_container">
-                        <div class="instance_software">
-                            misskey
-                        </div>
-                        <div class="instance_user">
-                            841257
-                        </div>
-                        <div class="instance_post">
-                            69414028
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="page_select">
-            <div class="page_select_child" id="page_select_child_selected">1</div>
-        </div>
+</div>
+<div id="instances_top">
+    <div id="all_instance_container">
     </div>
+    <div class="page_select">
+        <div class="page_select_child" id="page_select_child_selected">1</div>
+    </div>
+</div>
 <script>
 
     let all_data;
@@ -109,7 +51,7 @@
         const order = document.getElementsByName("order");
         let order_str;
         for (let i = 0; i < order.length; i++) {
-            if (order[i].checked) {//(color1[i].checked === true)と同じ
+            if (order[i].checked) {
                 order_str = order[i].value;
                 break;
             }
@@ -129,7 +71,11 @@
             sort_order: order_str,
             register: String(registration_flag),
         };
-        await fetch('./api.php?'+new URLSearchParams(params))
+        await fetch('https://api.z-n-a-k.net/lo/misskey_list.php?'+new URLSearchParams(params) , {
+            mode: 'cors',
+            headers: {
+                'Content-Type': 'application/json'
+            }})
             .then((response) => response.json())
             .then((data) => writeData(data));
     }
@@ -144,7 +90,11 @@
         next_select.forEach(function (node){
             node.setAttribute("id", "page_select_child_selected");
         });
-        window.location.hash = "top";
+        window.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: 'smooth'
+        });
     }
 
     function click_tab(){
@@ -198,9 +148,10 @@
 
     function addInstance(data){
         let root = creatediv("instance_top_container");
+        let banner = creatediv("instance_banner_container");
         let anker = root.appendChild(document.createElement("a"));
         anker.href = "https://" + data["domain"];
-        let banner = creatediv("instance_banner_container");
+        anker.target = "_blank";
         if (data["banner"] !== null && data["banner"] !== '' ) {
             let img = document.createAttribute('src')
             img.value = data["banner"];
