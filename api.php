@@ -11,7 +11,11 @@ const sort_by = [
 	"domain" => "domain"
 ];
 
-header("Content-Type: application/json; charset=utf-8");
+header("Content-Type: application/json");
+header("charset=utf-8");
+header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Headers: Content-Type");
+
 echo getAll();
 function getAll() : string{
 	$db = getPDO();
