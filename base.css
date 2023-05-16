@@ -148,7 +148,7 @@ a  {
         text-decoration: underline;
     }
 
-    #page_select_child_selected {
+    .page_select_child_selected {
         background-color: dimgray;
         color: whitesmoke;
     }
@@ -157,7 +157,7 @@ a  {
         background-color: whitesmoke;
         margin: 2vw;
         border: dimgray solid;
-    }
+     }
     .hide {
         display: none;
     }
@@ -319,7 +319,7 @@ a  {
         text-decoration: underline;
     }
 
-    #page_select_child_selected {
+    .page_select_child_selected {
         background-color: dimgray;
         color: whitesmoke;
     }
@@ -494,7 +494,7 @@ a  {
         text-decoration: underline;
     }
 
-    #page_select_child_selected {
+    .page_select_child_selected {
         background-color: dimgray;
         color: whitesmoke;
     }

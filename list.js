@@ -37,14 +37,14 @@ async function getStatus(){
 }
 
 function onPageChange(index) {
-    let now_select = document.getElementById("page_select_child_selected")
-    if (now_select != null) {
-        now_select.setAttribute("id", "");
-    }
+    let select = document.getElementsByClassName("page_select_child_selected");
+    Array.prototype.forEach.call(select, function (item) {
+        item.classList.remove("page_select_child_selected")
+    });
     writeDataByPage(index);
     let next_select = document.getElementsByName("page_selector_"+ String(index));
     next_select.forEach(function (node){
-        node.setAttribute("id", "page_select_child_selected");
+        node.classList.add("page_select_child_selected");
     });
     window.scrollTo({
         top: 0,
